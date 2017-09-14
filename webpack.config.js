@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const path = require('path');
 
 var config = {
-  entry: './src/ReduxFormHelper.js',
+  entry: './src/index.js',
   module: {
     rules: [{
       test: /\.js$/,
