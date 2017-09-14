@@ -1,0 +1,32 @@
+{
+  "name": "redux-form-helper",
+  "version": "0.1.0",
+  "description": "Controlled form components built easily with React/Redux",
+  "keywords": [
+    "form",
+    "validation",
+    "react",
+    "redux",
+    "flux"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hindmost/redux-form-helper.git"
+  },
+  "homepage": "https://github.com/hindmost/redux-form-helper",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "main": "dist/redux-form-helper.js",
+    "build": "npm run build:umd && npm run build:umd:min",
+    "build:umd": "webpack",
+    "build:umd:min": "cross-env NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "webpack": "^3.5.5"
+  }
+}
