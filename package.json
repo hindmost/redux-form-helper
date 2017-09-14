@@ -1,7 +1,7 @@
 {
   "name": "redux-form-helper",
   "version": "0.1.0",
-  "description": "Controlled form components built easily with React/Redux",
+  "description": "Helps build controlled form components with React/Redux",
   "keywords": [
     "form",
     "validation",
