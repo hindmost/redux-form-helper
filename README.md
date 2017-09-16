@@ -5,10 +5,12 @@ ES6 class that helps build controlled form components with React/Redux and simpl
 
 It has no dependencies and supposed to be used as a member of React component.
 
+[Demo](https://hindmost.github.io/redux-advanced-todos-example/)
+
 ## Installation
 
 ```
-npm install --save hindmost/redux-form-helper
+npm install --save redux-form-helper
 ```
 
 ## How to use
@@ -18,7 +20,7 @@ These data will include current field values as well as set of error flags for e
 The form state may be added to an existing reducer or defined in a separate reducer.
 Furthermore it's necessary to define specific action initiating update of the form state as well as respective action creator.
 
-### Action example:
+#### Action example:
 
 ``` javascript
 export const FORM_UPDATE = 'FORM_UPDATE' 
@@ -29,7 +31,7 @@ export const doFormUpdate = (data, errors) => {
 ...
 ```
 
-### Reducer example:
+#### Reducer example:
 
 ``` javascript
 ...
@@ -62,7 +64,7 @@ Now we instantiate `ReduxFormHelper` object as a member of the component and pas
 Then in the component's `render()` method we have to bind each field's `onChange` and the form's `onSubmit` events with `processField()` and `processForm()` methods respectively as well as display error blocks for each field depending on the form error flags in the state.
 The example below uses CSS from Twitter Bootstrap framework.
 
-### Container Component example:
+#### Container Component example:
 
 ``` javascript
 import React, {Component} from 'react';
@@ -146,7 +148,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(MyForm)
 
 ## API
 
-### new ReduxFormHelper(options)
+#### new ReduxFormHelper(options)
 
 Creates a new ReduxFormHelper instance.
 
@@ -176,14 +178,14 @@ Creates a new ReduxFormHelper instance.
     * `errors` - map of boolean flags indicating whether a field has an error. Object of (field name -> error flag) pairs.
 
 
-### resetForm()
+#### resetForm()
 
 Clear all data in the form state.
 
-### processField(event)
+#### processField(event)
 
 Handles `onChange` event on the current field and initiates update of the form state. Receives [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) object.
 
-### processForm(event)
+#### processForm(event)
 
 Handles `onSubmit` event of the form, initiates update of the form state and returns JSON representation of the form. Receives [`Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) object.
